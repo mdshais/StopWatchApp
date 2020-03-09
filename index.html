@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch App</title>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:900&display=swap" rel="stylesheet">
+    <style>
+        html {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .blink {
+            -webkit-animation: 1s linear infinite condemned_blink_effect; /* for Safari 4.0 - 8.0 */
+            animation: 1s linear infinite condemned_blink_effect;
+        }
+
+/* for Safari 4.0 - 8.0 */
+@-webkit-keyframes condemned_blink_effect { 
+  0% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes condemned_blink_effect {
+  0% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+    </style>
+</head>
+<body>
+    <h1>
+        <span class="minutes">00</span>
+        <span class="limiter">:</span>
+        <span class="seconds">00</span>
+        <!-- <span class="limiter">:</span>
+        <span class="milli">00</span> -->
+    </h1>
+    <button class="start">Start</button>
+    <button class="stop">Stop</button>
+    <button class="reset">Reset</button>
+    <script src="stopWatch.js"></script>
+</body>
+</html>
